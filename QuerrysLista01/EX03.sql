@@ -36,4 +36,4 @@ INSERT into tb_alunos(nome,idade,turma,nota,apelido) values ("Mariana",22,"1º A
 SELECT * from tb_alunos where nota > 7;
 SELECT * from tb_alunos where nota < 7;
 UPDATE tb_alunos set tb_alunos.turma = "1º ANO -B" where id = 5;
-SELECT * from tb_alunos;
+SELECT nome,nota from tb_alunos;
