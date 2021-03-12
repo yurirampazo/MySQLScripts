@@ -57,12 +57,13 @@ INSERT tb_produto (nome, preco, qtProduto, categoria_id) value ("Costela",30.00,
 INSERT tb_produto (nome, preco, qtProduto, categoria_id) value ("Hamburguer",35.00,30,5);
 INSERT tb_produto (nome, preco, qtProduto, categoria_id) value ("Alcatara",51.00,30,5);
 INSERT tb_produto (nome, preco, qtProduto, categoria_id) value ("Coxa",40.00,30,3);
-
+DELETE from tb_produto where id = 5;
+INSERT tb_produto (nome, preco, qtProduto, categoria_id) value ("Alcatara",51.00,30,1);
 SELECT * from tb_produto where preco > 50;
 SELECT * from tb_produto where preco between 3 and 60;
 SELECT * from tb_produto where nome like "%c%";
 
-SELECT * from tb_produto where categoria_id = 3;
+
 
 /*SELECT COUNT(*) from tb_produto;
 SELECT SUM(preco) from tb_produto;
@@ -71,3 +72,5 @@ SELECT avg(preco) from tb_produto;
 SELECT avg(qtProduto) from tb_produto;*/
 
 SELECT nome, preco, qtProduto, descricao, ativo from tb_produto inner join tb_categoria on tb_categoria.id = tb_produto.categoria_id;
+
+SELECT nome, preco, descricao from tb_produto inner join tb_categoria on  tb_categoria.id = tb_produto.categoria_id where descricao like "%Bovino%";
