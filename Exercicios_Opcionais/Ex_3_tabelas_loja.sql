@@ -73,9 +73,9 @@ SELECT avg (preco) from tb_produto;
 -- faça um select que retorne a soma de preços dos produtos;
 SELECT sum(preco) from tb_produto;
 -- faça um select que quantidade de produtos cadastrados na tabela
-SELECT
+SELECT sum(quantidade) from tb_produto;
 -- Faça um select onde traga todos os Produtos de uma categoria específica
-
+SELECT tb_produto.nome, tb_produto.preco, tb_produto.quantidade, tb_produto.desconto, tb_categoria.tipo, tb_categoria.frete, tb_categoria.entrega from tb_produto inner join tb_categoria on tb_categoria.id = tb_produto.categoria_id where tb_categoria.tipo like "%Eletrodomestico%";
 /* Faça um select onde traga todos os Produtos de uma categoria específica (exemplo todos
 os produtos que são cosméticos).*/
 
